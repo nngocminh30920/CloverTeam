@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Clover Shoes</string>
+    <string name="welcome_to_clover">Welcome to Clover</string>
+    <string name="login_to_continue">Login to continue</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="search">Search Product</string>
+    <string name="payment">Payment</string>
+    <string name="history">View Order History</string>
+    <string name="total">Total:</string>
+    <string name="scan">Scan Again</string>
+    <string name="size">Size</string>
+    <string name="product_name">Product Name</string>
+    <string name="quantity">Quantity</string>
+    <string name="price">Price</string>
+    <string name="position">Position</string>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/PRM/Clover_Shoes/app/src/main/res/drawable-v24/background_content_bottom.xml" value="0.14635416666666667" />
+        <entry key="..\:/PRM/Clover_Shoes/app/src/main/res/drawable-v24/background_icon.xml" value="0.14635416666666667" />
+        <entry key="..\:/PRM/Clover_Shoes/app/src/main/res/drawable-v24/background_input.xml" value="0.14635416666666667" />
+        <entry key="..\:/PRM/Clover_Shoes/app/src/main/res/drawable-v24/ic_logout.xml" value="0.14635416666666667" />
+        <entry key="..\:/PRM/Clover_Shoes/app/src/main/res/layout/activity_logIn.xml" value="0.25416666666666665" />
+        <entry key="..\:/PRM/Clover_Shoes/app/src/main/res/layout/activity_log_in.xml" value="0.25416666666666665" />
+        <entry key="..\:/PRM/Clover_Shoes/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/PRM/Clover_Shoes/app/src/main/res/layout/activity_order_history.xml" value="0.25416666666666665" />
+        <entry key="..\:/PRM/Clover_Shoes/app/src/main/res/layout/activity_payment.xml" value="0.25416666666666665" />
+        <entry key="..\:/PRM/Clover_Shoes/app/src/main/res/layout/activity_search.xml" value="0.35185185185185186" />
+        <entry key="..\:/PRM/Clover_Shoes/app/src/main/res/layout/log_in.xml" value="0.25416666666666665" />
+        <entry key="..\:/PRM/Clover_Shoes/app/src/main/res/layout/order_list.xml" value="0.24010416666666667" />
+        <entry key="..\:/PRM/Clover_Shoes/app/src/main/res/layout/order_row.xml" value="0.25416666666666665" />
+        <entry key="..\:/PRM/Clover_Shoes/app/src/main/res/layout/product_row.xml" value="0.6" />
+        <entry key="..\:/PRM/Clover_Shoes/app/src/main/res/layout/row.xml" value="0.25052083333333336" />
+        <entry key="..\:/PRM/Clover_Shoes/app/src/main/res/xml/provider_paths.xml" value="0.10729166666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

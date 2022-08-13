@@ -2,11 +2,16 @@ package com.example.warehousemanagement.model.response;
 
 import lombok.Data;
 
-@Data
-public class IncomeBranchResponse {
+import java.util.Date;
 
-    private Long id;
-    private String branchName;
+@Data
+public class IncomeBranchResponse implements Comparable<IncomeBranchResponse> {
+
+    private Date date;
     private Double income;
 
+    @Override
+    public int compareTo(IncomeBranchResponse o) {
+        return this.date.compareTo(o.getDate());
+    }
 }

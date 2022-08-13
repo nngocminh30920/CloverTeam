@@ -1,4 +1,4 @@
-package com.example.warehousemanagement.entity;
+package com.example.warehousemanagement.model.request;
 
 import lombok.Data;
 

@@ -1,0 +1,985 @@
+{
+	"info": {
+		"_postman_id": "0da4799a-15f7-420b-8683-2ff691761be3",
+		"name": "Warehouse Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11231693"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"username\",\r\n    \"password\" : \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/account/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"ggggg\",\r\n    \"password\": \"gggg\",\r\n    \"email\": \"emggail\",\r\n    \"fullName\": \"ggggg\",\r\n    \"role\": 1,\r\n    \"image\": \"image\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/account/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"account",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/account/id/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"account",
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/account/email/email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"account",
+						"email",
+						"email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Account By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/account/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"account",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Account",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/account?username=&fullName=&pageIndex=0&pageSize=5&email=1&role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"account"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": ""
+						},
+						{
+							"key": "fullName",
+							"value": ""
+						},
+						{
+							"key": "pageIndex",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						},
+						{
+							"key": "email",
+							"value": "1"
+						},
+						{
+							"key": "role",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Role",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idBranch\": 1,\r\n    \"idCategory\": 1,\r\n    \"name\": \"name\",\r\n    \"image\": \"image\",\r\n    \"price\": 110,\r\n    \"quantity\": 100,\r\n    \"size\": 110,\r\n    \"position\": \"position\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/product?pageIndex=0&pageSize=3&name=&size=2&category=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "3"
+						},
+						{
+							"key": "name",
+							"value": ""
+						},
+						{
+							"key": "size",
+							"value": "2"
+						},
+						{
+							"key": "category",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/product/id/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"product",
+						"id",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Product By Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/product/category/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"product",
+						"category",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Product By Branch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/product/branch/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"product",
+						"branch",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/product/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"product",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Branch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Top Product Selling",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/product/best_selling",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"product",
+						"best_selling"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Branch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"name\",\r\n    \"address\" : \"address\",\r\n    \"phone\" : \"phone\",\r\n    \"active\" : true,\r\n    \"accountId\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/branch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"branch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Branch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/branch?pageIndex=0&pageSize=6&active=false&name=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"branch"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "6"
+						},
+						{
+							"key": "active",
+							"value": "false"
+						},
+						{
+							"key": "name",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Export",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employee\": 1,\r\n    \"exportDate\": \"2019-12-11\",\r\n    \"products\": [\r\n        {\r\n            \"productId\": 1,\r\n            \"quantity\": 1,\r\n            \"price\": 1,\r\n            \"branchId\": 1\r\n        },\r\n        {\r\n            \"productId\": 2,\r\n            \"quantity\": 3,\r\n            \"price\": 2,\r\n            \"branchId\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/product/export",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"product",
+						"export"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Product Warehouse",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/warehouse?pageIndex=0&pageSize=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"warehouse"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Branch Manager",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/branch/manager",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"branch",
+						"manager"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Product Warehouse",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/warehouse?pageIndex=0&pageSize=10&name&size&category&warehouseId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"warehouse"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "name",
+							"value": null
+						},
+						{
+							"key": "size",
+							"value": null
+						},
+						{
+							"key": "category",
+							"value": null
+						},
+						{
+							"key": "warehouseId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Income Branh",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/branch/income?startDate=2002-02-02&endDate=2023-02-02&branchId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"branch",
+						"income"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2002-02-02"
+						},
+						{
+							"key": "endDate",
+							"value": "2023-02-02"
+						},
+						{
+							"key": "branchId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 3232,\r\n    \"usernam\": \"ggggg\",\r\n    \"password\": \"gggg\",\r\n    \"email\": \"emggail\",\r\n    \"fullName\": \"ggggg\",\r\n    \"role\": 1,\r\n    \"image\": \"image\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/account/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"account",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Inventory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/inventory?pageIndex=0&pageSize=5&name=a&size=&category=1&branchId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"inventory"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						},
+						{
+							"key": "name",
+							"value": "a"
+						},
+						{
+							"key": "size",
+							"value": ""
+						},
+						{
+							"key": "category",
+							"value": "1"
+						},
+						{
+							"key": "branchId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Branch And Warehouse By User id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/account/branch_warehouse/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"account",
+						"branch_warehouse",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Inventory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\" : 1,\r\n    \"branchId\" : 1,\r\n    \"quantity\": 99,\r\n    \"idCategory\": 1,\r\n    \"name\": \"aa\",\r\n    \"image\": \"image\",\r\n    \"price\": 1000,\r\n    \"size\": 1111,\r\n    \"position\": 1,\r\n    \"isWarehouse\" : true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/inventory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"inventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Ware House",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\" : 1,\r\n    \"quantity\" : 12,\r\n    \"positionId\" :1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/warehouse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"warehouse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete inventory By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/inventory/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"inventory",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Active Branch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/branch/active?id=1&active=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"branch",
+						"active"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "active",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Branch",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/branch/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"branch",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Inventory",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 2,\r\n    \"branchId\" : 2,\r\n    \"quantity\" : 1,\r\n    \"accountId\" : 1,\r\n    \"accountName\" : \"accountName\",\r\n    \"reason\" : \"reason\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/inventory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"inventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Branch By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/branch/id/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"branch",
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Delete History",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/inventory/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"inventory",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Position Branch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/position/branch/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"position",
+						"branch",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Position Warehouse",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/position/warehouse/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"position",
+						"warehouse",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Product Of Branch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/branch/product?pageIndex=0&pageSize=5&name=x&size=&category=1&branchId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"branch",
+						"product"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						},
+						{
+							"key": "name",
+							"value": "x"
+						},
+						{
+							"key": "size",
+							"value": ""
+						},
+						{
+							"key": "category",
+							"value": "1"
+						},
+						{
+							"key": "branchId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

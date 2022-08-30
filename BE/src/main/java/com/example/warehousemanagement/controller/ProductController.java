@@ -1,13 +1,6 @@
 package com.example.warehousemanagement.controller;
 
 import com.example.warehousemanagement.entity.Product;
-import com.example.warehousemanagement.entity.ProductOfBranch;
-import com.example.warehousemanagement.model.response.BestProductSellingResponse;
-import com.example.warehousemanagement.model.response.GetAllProductResponse;
-import com.example.warehousemanagement.model.response.ProductBranchResponse;
-import com.example.warehousemanagement.model.response.ProductResponse;
-import com.example.warehousemanagement.service.OrderDetailService;
-import com.example.warehousemanagement.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,12 +14,9 @@ public class ProductController {
 
     ProductService productService;
 
-    OrderDetailService orderDetailService;
-
     @Autowired
-    public ProductController(ProductService productService, OrderDetailService orderDetailService) {
+    public ProductController(ProductService productService) {
         this.productService = productService;
-        this.orderDetailService = orderDetailService;
     }
 
     @PostMapping
@@ -35,15 +25,12 @@ public class ProductController {
     }
 
     @GetMapping()
-    public ResponseEntity<GetAllProductResponse> getAllProduct(@RequestParam(required = false, defaultValue = "") String name,
-                                                               @RequestParam(required = false, defaultValue = "-1") int size,
-                                                               @RequestParam(required = false, defaultValue = "-1") Long category,
-                                                               @RequestParam int pageIndex, @RequestParam int pageSize) {
-        return ResponseEntity.ok(productService.getAllProduct(name, size, category, pageIndex, pageSize));
+    public ResponseEntity<List<Product>> getAllProduct(@RequestParam int pageIndex, @RequestParam int pageSize) {
+        return ResponseEntity.ok(productService.getAllProduct(pageIndex, pageSize));
     }
 
     @GetMapping("/id/{id}")
-    public ResponseEntity<ProductResponse> getProductById(@PathVariable Long id) {
+    public ResponseEntity<Product> getProductById(@PathVariable Long id) {
         return ResponseEntity.ok(productService.getById(id));
     }
 
@@ -53,7 +40,7 @@ public class ProductController {
     }
 
     @GetMapping("/branch/{id}")
-    public ResponseEntity<List<ProductOfBranch>> getProductByBranch(@PathVariable Long id) {
+    public ResponseEntity<List<Product>> getProductByBranch(@PathVariable Long id) {
         return ResponseEntity.ok(productService.getAllProductByBranch(id));
     }
 
@@ -61,25 +48,4 @@ public class ProductController {
     public ResponseEntity<Boolean> deleteProductById(@PathVariable Long id) {
         return ResponseEntity.ok(productService.deleteProductById(id));
     }
-
-    @GetMapping("best_selling")
-    public ResponseEntity<List<BestProductSellingResponse>> getTopSelling() {
-        return ResponseEntity.ok(orderDetailService.getTop10BestSellingProduct());
-    }
-
-    @PostMapping("export")
-    public ResponseEntity<ExportProductRequest> exportProduct(@RequestBody ExportProductRequest exportProductRequests) throws Exception {
-        return ResponseEntity.ok(productService.addNewExport(exportProductRequests));
-    }
-
-    @GetMapping("total")
-    public ResponseEntity<Double> getTotalOrder() {
-        return ResponseEntity.ok(orderDetailService.getTotalOrder());
-    }
-
-    @GetMapping("detail_product_of_branch/{id}/{id}")
-    public ResponseEntity<ProductBranchResponse> viewDetailProductOfBranch(@PathVariable Long branchId, Long positionId){
-        return ResponseEntity.ok(productService.getProductByPossionID(branchId,positionId));
-    }
-    
 }

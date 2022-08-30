@@ -1,7 +1,6 @@
 package com.example.warehousemanagement.controller;
 
 import com.example.warehousemanagement.entity.Role;
-import com.example.warehousemanagement.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;

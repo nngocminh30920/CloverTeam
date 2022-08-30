@@ -3,22 +3,18 @@ package com.example.warehousemanagement.entity;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.sql.Date;
 
 @Entity
 @Data
-@Table(name = "`order`")
-public class Order {
-
+@Table(name = "position_warehouse")
+public class PositionWarehouse {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Long accountId;
+    private Long warehouseId;
 
-    private Long branchId;
+    private boolean status;
 
-    private Date orderDate;
-
-    private double totalPrice;
+    private String name;
 }

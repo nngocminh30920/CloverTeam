@@ -6,17 +6,19 @@ import javax.persistence.*;
 
 @Entity
 @Data
-@Table(name = "product")
-public class Product {
+@Table(name = "inventory")
+public class Inventory {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Long idBranch;
+    private Long productId;
+
+    private Long branchId;
+
+    private int quantity;
 
     private Long idCategory;
-
-    private Long warehouseId;
 
     private String name;
 
@@ -25,9 +27,5 @@ public class Product {
     private Double price;
 
     private int size;
-
-    private String sku;
-
-    private Long position;
 
 }

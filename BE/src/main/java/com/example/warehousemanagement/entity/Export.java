@@ -7,18 +7,14 @@ import java.sql.Date;
 
 @Entity
 @Data
-@Table(name = "`order`")
-public class Order {
-
+@Table(name = "export")
+public class Export {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Long accountId;
+    private Date exportDate;
 
-    private Long branchId;
+    private Long employee;
 
-    private Date orderDate;
-
-    private double totalPrice;
 }

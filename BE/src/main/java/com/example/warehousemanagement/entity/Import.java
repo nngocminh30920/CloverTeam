@@ -7,18 +7,17 @@ import java.sql.Date;
 
 @Entity
 @Data
-@Table(name = "`order`")
-public class Order {
-
+@Table(name = "import")
+public class Import {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Long accountId;
-
-    private Long branchId;
-
-    private Date orderDate;
+    private Date importDate;
 
     private double totalPrice;
+
+    private Long employeeId;
+
+
 }

@@ -7,18 +7,23 @@ import java.sql.Date;
 
 @Entity
 @Data
-@Table(name = "`order`")
-public class Order {
-
+@Table(name = "detele_history")
+public class DeleteHistory {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Long accountId;
+    private Long inventoryId;
 
     private Long branchId;
 
-    private Date orderDate;
+    private int quantity;
 
-    private double totalPrice;
+    private Date deleteDate;
+
+    private String reason;
+
+    private Long accountId;
+
+    private String accountName;
 }

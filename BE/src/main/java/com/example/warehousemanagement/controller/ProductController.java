@@ -2,7 +2,6 @@ package com.example.warehousemanagement.controller;
 
 import com.example.warehousemanagement.entity.Product;
 import com.example.warehousemanagement.entity.ProductOfBranch;
-import com.example.warehousemanagement.model.request.ExportProductRequest;
 import com.example.warehousemanagement.model.response.BestProductSellingResponse;
 import com.example.warehousemanagement.model.response.GetAllProductResponse;
 import com.example.warehousemanagement.model.response.ProductBranchResponse;

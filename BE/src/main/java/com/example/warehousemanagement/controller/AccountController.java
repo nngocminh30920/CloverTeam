@@ -1,8 +1,6 @@
 package com.example.warehousemanagement.controller;
 
 import com.example.warehousemanagement.entity.Account;
-import com.example.warehousemanagement.model.request.LoginRequest;
-import com.example.warehousemanagement.model.request.RegisterRequest;
 import com.example.warehousemanagement.model.response.AccountResponse;
 import com.example.warehousemanagement.model.response.GetAllAccountResponse;
 import com.example.warehousemanagement.model.response.ListBranchAndWarehouseResponse;

@@ -2,7 +2,6 @@ package com.example.warehousemanagement.controller;
 
 import com.example.warehousemanagement.entity.DeleteHistory;
 import com.example.warehousemanagement.entity.Inventory;
-import com.example.warehousemanagement.model.request.DeleteProductInventoryRequest;
 import com.example.warehousemanagement.model.request.InventoryRequest;
 import com.example.warehousemanagement.model.response.ListProductInventoryResponse;
 import com.example.warehousemanagement.service.InventoryService;
